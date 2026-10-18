@@ -26,12 +26,28 @@
 </div>
 <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
 <script>
+let _scrollY = 0;
 function toggleMobileMenu(){
+  const menu=document.getElementById('mobileMenu');
+  const isOpen=menu.classList.contains('open');
+  if(isOpen){closeMobileMenu()}else{openMobileMenu()}
+}
+function openMobileMenu(){
+  _scrollY = window.scrollY;
   const menu=document.getElementById('mobileMenu');
   const overlay=document.getElementById('mobileOverlay');
   const btn=document.getElementById('hamburgerBtn');
-  const isOpen=menu.classList.contains('open');
-  if(isOpen){closeMobileMenu()}else{menu.classList.add('open');overlay.classList.add('open');btn.classList.add('open');document.body.classList.add('menu-open')}
+  menu.classList.add('open');
+  overlay.classList.add('open');
+  btn.classList.add('open');
+  // Scroll lock mantığı: body'yi fixed yap, top'u -scrollY yap
+  document.body.style.position='fixed';
+  document.body.style.top=`-${_scrollY}px`;
+  document.body.style.left='0';
+  document.body.style.right='0';
+  document.body.style.width='100%';
+  document.documentElement.classList.add('scroll-lock');
+  document.body.classList.add('scroll-lock');
 }
 function closeMobileMenu(){
   const menu=document.getElementById('mobileMenu');
@@ -40,9 +56,14 @@ function closeMobileMenu(){
   if(menu) menu.classList.remove('open');
   if(overlay) overlay.classList.remove('open');
   if(btn) btn.classList.remove('open');
-  document.body.classList.remove('menu-open');
+  document.documentElement.classList.remove('scroll-lock');
+  document.body.classList.remove('scroll-lock');
+  document.body.style.position='';
+  document.body.style.top='';
+  document.body.style.left='';
+  document.body.style.right='';
+  document.body.style.width='';
+  window.scrollTo(0, _scrollY);
 }
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMobileMenu()});
-// Linklere tıklayınca kapanma zaten onclick ile var
-// Sayfa kaydırınca kapanmasın, sadece overlay tıklayınca kapansın
 </script>
