@@ -8,36 +8,41 @@
 <a href="/blog/">Blog</a>
 <a href="/iletisim/">İletişim</a>
 </nav>
-<a class="btn btn-p desktop-only" href="https://wa.me/905433880019" target="_blank" rel="noopener noreferrer">Teklif Al ↗</a>
+<a class="btn btn-p desktop-only" href="https://wa.me/905433880019" target="_blank">Teklif Al ↗</a>
 <button class="hamburger" id="hamburgerBtn" aria-label="Menüyü Aç" onclick="toggleMobileMenu()">
 <span></span><span></span><span></span>
 </button>
 </div>
+</header>
 <div class="mobile-menu" id="mobileMenu">
 <a href="/" onclick="closeMobileMenu()">Anasayfa</a>
-<a href="/demolar/" onclick="closeMobileMenu()">Demolar</a>
+<a href="/demolar/" onclick="closeMobileMenu()">Demolar (22)</a>
 <a href="/sss/" onclick="closeMobileMenu()">SSS</a>
 <a href="/blog/" onclick="closeMobileMenu()">Blog</a>
 <a href="/hakkimizda/" onclick="closeMobileMenu()">Hakkımızda</a>
 <a href="/hizmetlerimiz/" onclick="closeMobileMenu()">Hizmetlerimiz</a>
 <a href="/iletisim/" onclick="closeMobileMenu()">İletişim</a>
-<a class="btn btn-p" style="margin-top:12px;justify-content:center" href="https://wa.me/905433880019" target="_blank" rel="noopener noreferrer">Teklif Al ↗</a>
+<a class="btn btn-p" style="margin-top:16px;justify-content:center;width:100%" href="https://wa.me/905433880019" target="_blank">Teklif Al ↗</a>
 </div>
 <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
-</header>
 <script>
 function toggleMobileMenu(){
   const menu=document.getElementById('mobileMenu');
   const overlay=document.getElementById('mobileOverlay');
   const btn=document.getElementById('hamburgerBtn');
   const isOpen=menu.classList.contains('open');
-  if(isOpen){closeMobileMenu()}else{menu.classList.add('open');overlay.classList.add('open');btn.classList.add('open');document.body.style.overflow='hidden'}
+  if(isOpen){closeMobileMenu()}else{menu.classList.add('open');overlay.classList.add('open');btn.classList.add('open');document.body.classList.add('menu-open')}
 }
 function closeMobileMenu(){
-  document.getElementById('mobileMenu').classList.remove('open');
-  document.getElementById('mobileOverlay').classList.remove('open');
-  document.getElementById('hamburgerBtn').classList.remove('open');
-  document.body.style.overflow='';
+  const menu=document.getElementById('mobileMenu');
+  const overlay=document.getElementById('mobileOverlay');
+  const btn=document.getElementById('hamburgerBtn');
+  if(menu) menu.classList.remove('open');
+  if(overlay) overlay.classList.remove('open');
+  if(btn) btn.classList.remove('open');
+  document.body.classList.remove('menu-open');
 }
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMobileMenu()});
+// Linklere tıklayınca kapanma zaten onclick ile var
+// Sayfa kaydırınca kapanmasın, sadece overlay tıklayınca kapansın
 </script>
