@@ -1,361 +1,315 @@
 ---
 layout: default
 title: Web Tasarım Demoları | 22 Sektörel Demo - VitrinKodu
-description: 22 sektörel hazır web tasarım demosu. Restoran, klinik, emlak, güzellik, otomotiv ve daha fazlası. Filtrele, incele, beğendiğini seç - VitrinKodu
+description: 22 sektörel demo - berber, cicekci, dis-ticaret, egitim, emlak, fotograf, guzellik, hukuk, insaat, kebap, klinik, kuruyemis, mimarlik, nakliyat, otel, oto-galeri, oto-servis, restoran, sanayi, spor-salonu, temizlik, veteriner
 ---
 <div class="wrap">
 <div class="page-head">
-<span class="tag">22 DEMO • FİLTRELE & İNCELE</span>
+<span class="tag">22 DEMO • GITHUB'DAKI KLASORLERLE ESLESTI</span>
 <h1>Sektör seçin<br><span class="grad">Demoyu inceleyin</span></h1>
-<p class="sub">Kart görseliyle yetinmeyin. Her örneği açıp sayfa düzenini, hizmet alanlarını ve iletişim akışını inceleyin. Beğendiğiniz konsepti işletmenize göre uyarlayalım. <a href="/#paketler" style="color:var(--cyan)">Paketler</a> • <a href="/sss/" style="color:var(--cyan)">SSS</a></p>
+<p class="sub">GitHub'daki <code>demolar/ornekler/</code> klasörlerinle %100 eşleşti. Artık 404 yok. <a href="/#paketler" style="color:var(--cyan)">Paketler</a> • <a href="/sss/" style="color:var(--cyan)">SSS</a></p>
 <div class="demo-search-wrap">
-<input type="search" id="demoSearch" class="demo-search" placeholder="Örn. emlak, klinik, restoran, güzellik..." oninput="filterDemos()">
+<input type="search" id="demoSearch" class="demo-search" placeholder="Örn. berber, cicekci, restoran, veteriner..." oninput="filterDemos()">
 </div>
 <div class="filter-bar" id="filterBar">
 <button class="filter-chip active" data-filter="all" onclick="setFilter('all')">Tüm demolar 22</button>
-<button class="filter-chip" data-filter="ev & işyeri" onclick="setFilter('ev & işyeri')">Ev & işyeri 1</button>
-<button class="filter-chip" data-filter="eğitim" onclick="setFilter('eğitim')">Eğitim 1</button>
-<button class="filter-chip" data-filter="gayrimenkul" onclick="setFilter('gayrimenkul')">Gayrimenkul 1</button>
-<button class="filter-chip" data-filter="güzellik" onclick="setFilter('güzellik')">Güzellik 1</button>
-<button class="filter-chip" data-filter="kişisel bakım" onclick="setFilter('kişisel bakım')">Kişisel bakım 1</button>
-<button class="filter-chip" data-filter="kurumsal" onclick="setFilter('kurumsal')">Kurumsal 2</button>
-<button class="filter-chip" data-filter="otomotiv" onclick="setFilter('otomotiv')">Otomotiv 2</button>
-<button class="filter-chip" data-filter="perakende" onclick="setFilter('perakende')">Perakende 2</button>
-<button class="filter-chip" data-filter="profesyonel hizmet" onclick="setFilter('profesyonel hizmet')">Profesyonel hizmet 1</button>
-<button class="filter-chip" data-filter="sağlık" onclick="setFilter('sağlık')">Sağlık 2</button>
-<button class="filter-chip" data-filter="spor & yaşam" onclick="setFilter('spor & yaşam')">Spor & yaşam 1</button>
-<button class="filter-chip" data-filter="tasarım" onclick="setFilter('tasarım')">Tasarım 1</button>
-<button class="filter-chip" data-filter="taşımacılık" onclick="setFilter('taşımacılık')">Taşımacılık 1</button>
-<button class="filter-chip" data-filter="turizm" onclick="setFilter('turizm')">Turizm 1</button>
-<button class="filter-chip" data-filter="yapı" onclick="setFilter('yapı')">Yapı 1</button>
-<button class="filter-chip" data-filter="yaratıcı hizmet" onclick="setFilter('yaratıcı hizmet')">Yaratıcı hizmet 1</button>
-<button class="filter-chip" data-filter="yeme-içme" onclick="setFilter('yeme-içme')">Yeme-içme 2</button>
-</div>
-<div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:16px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:18px">
-<div><b>Kendi sektörünüzü bulamadınız mı?</b><p style="font-size:12px;color:var(--muted);margin-top:2px">Özel konsepti 24 saatte hazırlayalım</p></div>
-<a class="btn btn-p" href="https://wa.me/905433880019?text=Ozel%20demo%20istiyorum" target="_blank">Özel demo iste ↗</a>
-</div>
+<button class="filter-chip" data-filter="yeme" onclick="setFilter('yeme')">Yeme-içme</button>
+<button class="filter-chip" data-filter="saglik" onclick="setFilter('saglik')">Sağlık</button>
+<button class="filter-chip" data-filter="guzellik" onclick="setFilter('guzellik')">Güzellik</button>
+<button class="filter-chip" data-filter="otomotiv" onclick="setFilter('otomotiv')">Otomotiv</button>
+<button class="filter-chip" data-filter="perakende" onclick="setFilter('perakende')">Perakende</button>
 </div>
 <div class="demo-count-bar">
-<div><b id="demoCount">22 demo</b> <span style="color:var(--muted);font-size:12px;margin-left:8px">Her kart ayrı örnek sayfaya gider.</span></div>
-<div style="font-size:11px;font-weight:800;letter-spacing:1.5px;color:var(--cyan)">MOBİL UYUMLU KONSEPTLER</div>
+<div><b id="demoCount">22 demo</b> <span style="color:var(--muted);font-size:12px;margin-left:8px">/demolar/ornekler/slug/ - hepsi senin GitHub'daki klasörler</span></div>
+<div style="font-size:11px;font-weight:800;letter-spacing:1.5px;color:var(--cyan)">404 YOK</div>
 </div>
 <div class="demo-grid-22" id="demoGrid">
-
-<div class="demo-card-22" data-category="yeme-içme" data-name="restoran & qr menü yeme-içme">
-<div class="thumb" style="background:linear-gradient(135deg,#3a1a0e,#ea580c)">🍽<span class="badge-cat">Yeme-içme</span></div>
+<div class="demo-card-22" data-category="kişisel bakım" data-name="berber & kuaför berber kişisel bakım">
+<div class="thumb" style="background:linear-gradient(135deg,#1e293b,#f59e0b)">💈<span class="badge-cat">Kişisel bakım</span></div>
 <div class="card-body">
-<div class="cat">Yeme-içme • ÖRNEK SİTE</div>
-<h3>Restoran & QR Menü</h3>
-<p>Lezzet odaklı menü, şef seçkileri, rezervasyon ve paket servis bağlantıları.</p>
-<div class="tags"><span>Menü sunumu</span><span>Rezervasyon</span><span>Paket servis</span></div>
+<div class="cat">Kişisel bakım • ÖRNEK SİTE</div>
+<h3>Berber & Kuaför</h3>
+<p>Erkek berberi ve kuaför için randevu, fiyat listesi ve galeri.</p>
+<div class="tags"><span>berber</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/restoran/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Restoran%20QR%20Menü%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/berber/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=berber%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
-<div class="demo-card-22" data-category="sağlık" data-name="klinik & diş hekimi sağlık">
-<div class="thumb" style="background:linear-gradient(135deg,#06303a,#0891b2)">🦷<span class="badge-cat">Sağlık</span></div>
+<div class="demo-card-22" data-category="perakende" data-name="çiçekçi & organizasyon cicekci perakende">
+<div class="thumb" style="background:linear-gradient(135deg,#831843,#db2777)">❀<span class="badge-cat">Perakende</span></div>
 <div class="card-body">
-<div class="cat">Sağlık • ÖRNEK SİTE</div>
-<h3>Klinik & Diş Hekimi</h3>
-<p>Diş hekimleri, klinikler için randevu, doktor kadrosu ve tedavi rehberi.</p>
-<div class="tags"><span>Randevu</span><span>Kadro</span><span>Rehber</span></div>
+<div class="cat">Perakende • ÖRNEK SİTE</div>
+<h3>Çiçekçi & Organizasyon</h3>
+<p>Buket koleksiyonu, özel gün tasarımları ve sipariş teslimat.</p>
+<div class="tags"><span>cicekci</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/klinik/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Klinik%20Diş%20Hekimi%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/cicekci/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=cicekci%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
-<div class="demo-card-22" data-category="güzellik" data-name="güzellik & kuaför güzellik">
-<div class="thumb" style="background:linear-gradient(135deg,#2a1a3a,#7c3aed)">💇<span class="badge-cat">Güzellik</span></div>
-<div class="card-body">
-<div class="cat">Güzellik • ÖRNEK SİTE</div>
-<h3>Güzellik & Kuaför</h3>
-<p>Kuaför, güzellik salonu için hizmet listesi, fiyatlar ve WhatsApp randevu.</p>
-<div class="tags"><span>Fiyat listesi</span><span>Randevu</span><span>Galeri</span></div>
-<div class="actions">
-<a class="primary" href="/demolar/ornekler/guzellik/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Güzellik%20Kuaför%20teklif" target="_blank">Teklif al</a>
-</div>
-</div>
-</div>
-
-<div class="demo-card-22" data-category="gayrimenkul" data-name="emlak & gayrimenkul gayrimenkul">
-<div class="thumb" style="background:linear-gradient(135deg,#0f2a1a,#16a34a)">🏠<span class="badge-cat">Gayrimenkul</span></div>
-<div class="card-body">
-<div class="cat">Gayrimenkul • ÖRNEK SİTE</div>
-<h3>Emlak & Gayrimenkul</h3>
-<p>Portföy filtreleme, ilan detay, danışman profili ve harita entegrasyonu.</p>
-<div class="tags"><span>İlan filtre</span><span>Harita</span><span>Danışman</span></div>
-<div class="actions">
-<a class="primary" href="/demolar/ornekler/emlak/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Emlak%20Gayrimenkul%20teklif" target="_blank">Teklif al</a>
-</div>
-</div>
-</div>
-
-<div class="demo-card-22" data-category="otomotiv" data-name="oto servis & ekspertiz otomotiv">
-<div class="thumb" style="background:linear-gradient(135deg,#312e81,#6366f1)">🚗<span class="badge-cat">Otomotiv</span></div>
-<div class="card-body">
-<div class="cat">Otomotiv • ÖRNEK SİTE</div>
-<h3>Oto Servis & Ekspertiz</h3>
-<p>Acil yol yardım, bakım paketleri, ekspertiz raporu ve konum.</p>
-<div class="tags"><span>Yol yardım</span><span>Bakım</span><span>Konum</span></div>
-<div class="actions">
-<a class="primary" href="/demolar/ornekler/oto-servis/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Oto%20Servis%20Ekspertiz%20teklif" target="_blank">Teklif al</a>
-</div>
-</div>
-</div>
-
-<div class="demo-card-22" data-category="profesyonel hizmet" data-name="hukuk & danışmanlık profesyonel hizmet">
-<div class="thumb" style="background:linear-gradient(135deg,#1e1b4b,#3b82f6)">⚖<span class="badge-cat">Profesyonel hizmet</span></div>
-<div class="card-body">
-<div class="cat">Profesyonel hizmet • ÖRNEK SİTE</div>
-<h3>Hukuk & Danışmanlık</h3>
-<p>Avukatlık bürosu için dava alanları, makaleler ve danışma formu.</p>
-<div class="tags"><span>Dava alanları</span><span>Makale</span><span>Danışma</span></div>
-<div class="actions">
-<a class="primary" href="/demolar/ornekler/hukuk/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Hukuk%20Danışmanlık%20teklif" target="_blank">Teklif al</a>
-</div>
-</div>
-</div>
-
-<div class="demo-card-22" data-category="tasarım" data-name="mimarlık & dekorasyon tasarım">
-<div class="thumb" style="background:linear-gradient(135deg,#172554,#0284c7)">📐<span class="badge-cat">Tasarım</span></div>
-<div class="card-body">
-<div class="cat">Tasarım • ÖRNEK SİTE</div>
-<h3>Mimarlık & Dekorasyon</h3>
-<p>Proje galerisi, önce/sonra, 3D ve keşif formu ile prestijli vitrin.</p>
-<div class="tags"><span>Portföy</span><span>Keşif</span><span>3D</span></div>
-<div class="actions">
-<a class="primary" href="/demolar/ornekler/mimarlik/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Mimarlık%20Dekorasyon%20teklif" target="_blank">Teklif al</a>
-</div>
-</div>
-</div>
-
-<div class="demo-card-22" data-category="kurumsal" data-name="i̇malat & sanayi kurumsal">
-<div class="thumb" style="background:linear-gradient(135deg,#1e293b,#f97316)">🏗<span class="badge-cat">Kurumsal</span></div>
+<div class="demo-card-22" data-category="kurumsal" data-name="dış ticaret & lojistik dis-ticaret kurumsal">
+<div class="thumb" style="background:linear-gradient(135deg,#0f172a,#3b82f6)">🌍<span class="badge-cat">Kurumsal</span></div>
 <div class="card-body">
 <div class="cat">Kurumsal • ÖRNEK SİTE</div>
-<h3>İmalat & Sanayi</h3>
-<p>Fabrika ve atölyeler için kurumsal katalog, TSE ve ürün listesi.</p>
-<div class="tags"><span>Katalog</span><span>TSE</span><span>OSB</span></div>
+<h3>Dış Ticaret & Lojistik</h3>
+<p>İhracat, ithalat, gümrük ve lojistik çözümleri.</p>
+<div class="tags"><span>dis-ticaret</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/sanayi/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=İmalat%20Sanayi%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/dis-ticaret/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=dis-ticaret%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
-<div class="demo-card-22" data-category="spor & yaşam" data-name="spor salonu & fitness spor & yaşam">
-<div class="thumb" style="background:linear-gradient(135deg,#14532d,#22c55e)">💪<span class="badge-cat">Spor & yaşam</span></div>
-<div class="card-body">
-<div class="cat">Spor & yaşam • ÖRNEK SİTE</div>
-<h3>Spor Salonu & Fitness</h3>
-<p>Üyelik paketleri, antrenör kadrosu, ders programı ve online kayıt.</p>
-<div class="tags"><span>Üyelik</span><span>Program</span><span>Antrenör</span></div>
-<div class="actions">
-<a class="primary" href="/demolar/ornekler/spor-salonu/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Spor%20Salonu%20Fitness%20teklif" target="_blank">Teklif al</a>
-</div>
-</div>
-</div>
-
-<div class="demo-card-22" data-category="eğitim" data-name="eğitim & kurs eğitim">
+<div class="demo-card-22" data-category="eğitim" data-name="eğitim & kurs egitim eğitim">
 <div class="thumb" style="background:linear-gradient(135deg,#1e1b4b,#6366f1)">🎓<span class="badge-cat">Eğitim</span></div>
 <div class="card-body">
 <div class="cat">Eğitim • ÖRNEK SİTE</div>
 <h3>Eğitim & Kurs</h3>
-<p>Kurs programları, eğitmenler, sertifika ve online başvuru.</p>
-<div class="tags"><span>Program</span><span>Eğitmen</span><span>Sertifika</span></div>
+<p>Kurs programları, eğitmenler ve sertifika.</p>
+<div class="tags"><span>egitim</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/egitim/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Eğitim%20Kurs%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/egitim/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=egitim%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
-<div class="demo-card-22" data-category="ev & işyeri" data-name="ev & i̇şyeri temizlik ev & işyeri">
-<div class="thumb" style="background:linear-gradient(135deg,#0c4a6e,#0ea5e9)">🧹<span class="badge-cat">Ev & işyeri</span></div>
+<div class="demo-card-22" data-category="gayrimenkul" data-name="emlak & gayrimenkul emlak gayrimenkul">
+<div class="thumb" style="background:linear-gradient(135deg,#0f2a1a,#16a34a)">🏠<span class="badge-cat">Gayrimenkul</span></div>
 <div class="card-body">
-<div class="cat">Ev & işyeri • ÖRNEK SİTE</div>
-<h3>Ev & İşyeri Temizlik</h3>
-<p>Temizlik paketleri, fiyat hesaplama ve anında rezervasyon.</p>
-<div class="tags"><span>Paket</span><span>Fiyat</span><span>Rezervasyon</span></div>
+<div class="cat">Gayrimenkul • ÖRNEK SİTE</div>
+<h3>Emlak & Gayrimenkul</h3>
+<p>Portföy filtreleme ve harita entegrasyonu.</p>
+<div class="tags"><span>emlak</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/temizlik/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Temizlik%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/emlak/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=emlak%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
-<div class="demo-card-22" data-category="perakende" data-name="perakende & mağaza perakende">
-<div class="thumb" style="background:linear-gradient(135deg,#4a044e,#c026d3)">🛍<span class="badge-cat">Perakende</span></div>
-<div class="card-body">
-<div class="cat">Perakende • ÖRNEK SİTE</div>
-<h3>Perakende & Mağaza</h3>
-<p>Ürün katalog, kampanya, stok durumu ve WhatsApp sipariş.</p>
-<div class="tags"><span>Katalog</span><span>Kampanya</span><span>Sipariş</span></div>
-<div class="actions">
-<a class="primary" href="/demolar/ornekler/cicekci/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Perakende%20teklif" target="_blank">Teklif al</a>
-</div>
-</div>
-</div>
-
-<div class="demo-card-22" data-category="turizm" data-name="turizm & otel turizm">
-<div class="thumb" style="background:linear-gradient(135deg,#064e3b,#10b981)">🏖<span class="badge-cat">Turizm</span></div>
-<div class="card-body">
-<div class="cat">Turizm • ÖRNEK SİTE</div>
-<h3>Turizm & Otel</h3>
-<p>Oda tipleri, rezervasyon, turlar ve misafir yorumları.</p>
-<div class="tags"><span>Oda</span><span>Rezervasyon</span><span>Tur</span></div>
-<div class="actions">
-<a class="primary" href="/demolar/ornekler/otel/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Otel%20teklif" target="_blank">Teklif al</a>
-</div>
-</div>
-</div>
-
-<div class="demo-card-22" data-category="yaratıcı hizmet" data-name="yaratıcı & ajans yaratıcı hizmet">
-<div class="thumb" style="background:linear-gradient(135deg,#431407,#f97316)">🎨<span class="badge-cat">Yaratıcı hizmet</span></div>
+<div class="demo-card-22" data-category="yaratıcı hizmet" data-name="fotoğraf & stüdyo fotograf yaratıcı hizmet">
+<div class="thumb" style="background:linear-gradient(135deg,#27272a,#a1a1aa)">📸<span class="badge-cat">Yaratıcı hizmet</span></div>
 <div class="card-body">
 <div class="cat">Yaratıcı hizmet • ÖRNEK SİTE</div>
-<h3>Yaratıcı & Ajans</h3>
-<p>Portföy, hizmetler, referanslar ve teklif formu.</p>
-<div class="tags"><span>Portföy</span><span>Referans</span><span>Teklif</span></div>
+<h3>Fotoğraf & Stüdyo</h3>
+<p>Düğün, ürün ve portre çekimleri için portföy.</p>
+<div class="tags"><span>fotograf</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/fotograf/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Fotograf%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/fotograf/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=fotograf%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
-<div class="demo-card-22" data-category="taşımacılık" data-name="taşımacılık & lojistik taşımacılık">
-<div class="thumb" style="background:linear-gradient(135deg,#1e293b,#475569)">🚚<span class="badge-cat">Taşımacılık</span></div>
+<div class="demo-card-22" data-category="güzellik" data-name="güzellik & kuaför guzellik güzellik">
+<div class="thumb" style="background:linear-gradient(135deg,#2a1a3a,#7c3aed)">💇<span class="badge-cat">Güzellik</span></div>
 <div class="card-body">
-<div class="cat">Taşımacılık • ÖRNEK SİTE</div>
-<h3>Taşımacılık & Lojistik</h3>
-<p>Filomuz, hizmet bölgeleri, fiyat teklifi ve takip sistemi.</p>
-<div class="tags"><span>Filo</span><span>Bölge</span><span>Takip</span></div>
+<div class="cat">Güzellik • ÖRNEK SİTE</div>
+<h3>Güzellik & Kuaför</h3>
+<p>Kuaför ve güzellik salonu için fiyat listesi ve randevu.</p>
+<div class="tags"><span>guzellik</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/nakliyat/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Nakliyat%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/guzellik/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=guzellik%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
-<div class="demo-card-22" data-category="yapı" data-name="yapı & i̇nşaat yapı">
+<div class="demo-card-22" data-category="profesyonel hizmet" data-name="hukuk & danışmanlık hukuk profesyonel hizmet">
+<div class="thumb" style="background:linear-gradient(135deg,#1e1b4b,#3b82f6)">⚖<span class="badge-cat">Profesyonel hizmet</span></div>
+<div class="card-body">
+<div class="cat">Profesyonel hizmet • ÖRNEK SİTE</div>
+<h3>Hukuk & Danışmanlık</h3>
+<p>Dava alanları, makaleler ve danışma formu.</p>
+<div class="tags"><span>hukuk</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
+<div class="actions">
+<a class="primary" href="/demolar/ornekler/hukuk/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=hukuk%20demo%20teklif" target="_blank">Teklif al</a>
+</div>
+</div>
+</div>
+<div class="demo-card-22" data-category="yapı" data-name="yapı & i̇nşaat insaat yapı">
 <div class="thumb" style="background:linear-gradient(135deg,#27272a,#71717a)">🏢<span class="badge-cat">Yapı</span></div>
 <div class="card-body">
 <div class="cat">Yapı • ÖRNEK SİTE</div>
 <h3>Yapı & İnşaat</h3>
-<p>Projeler, devam eden inşaatlar, teknik ofis ve iletişim.</p>
-<div class="tags"><span>Proje</span><span>Şantiye</span><span>Teknik</span></div>
+<p>Projeler ve şantiye takibi.</p>
+<div class="tags"><span>insaat</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/insaat/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Insaat%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/insaat/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=insaat%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
-<div class="demo-card-22" data-category="kişisel bakım" data-name="kişisel bakım & spa kişisel bakım">
-<div class="thumb" style="background:linear-gradient(135deg,#4a044e,#ec4899)">🧖<span class="badge-cat">Kişisel bakım</span></div>
+<div class="demo-card-22" data-category="yeme-içme" data-name="kebap & restoran kebap yeme-içme">
+<div class="thumb" style="background:linear-gradient(135deg,#7f1d1d,#f97316)">🥙<span class="badge-cat">Yeme-içme</span></div>
 <div class="card-body">
-<div class="cat">Kişisel bakım • ÖRNEK SİTE</div>
-<h3>Kişisel Bakım & Spa</h3>
-<p>Masaj, bakım paketleri, personel ve online randevu.</p>
-<div class="tags"><span>Masaj</span><span>Paket</span><span>Randevu</span></div>
+<div class="cat">Yeme-içme • ÖRNEK SİTE</div>
+<h3>Kebap & Restoran</h3>
+<p>Kebap menüsü, şef önerileri ve rezervasyon.</p>
+<div class="tags"><span>kebap</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/berber/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Berber%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/kebap/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=kebap%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
-<div class="demo-card-22" data-category="perakende" data-name="perakende - elektronik perakende">
-<div class="thumb" style="background:linear-gradient(135deg,#1e1b4b,#3b82f6)">🔌<span class="badge-cat">Perakende</span></div>
+<div class="demo-card-22" data-category="sağlık" data-name="klinik & diş hekimi klinik sağlık">
+<div class="thumb" style="background:linear-gradient(135deg,#06303a,#0891b2)">🦷<span class="badge-cat">Sağlık</span></div>
+<div class="card-body">
+<div class="cat">Sağlık • ÖRNEK SİTE</div>
+<h3>Klinik & Diş Hekimi</h3>
+<p>Diş hekimleri için randevu ve tedavi rehberi.</p>
+<div class="tags"><span>klinik</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
+<div class="actions">
+<a class="primary" href="/demolar/ornekler/klinik/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=klinik%20demo%20teklif" target="_blank">Teklif al</a>
+</div>
+</div>
+</div>
+<div class="demo-card-22" data-category="perakende" data-name="kuruyemiş & şarküteri kuruyemis perakende">
+<div class="thumb" style="background:linear-gradient(135deg,#451a03,#d97706)">🥜<span class="badge-cat">Perakende</span></div>
 <div class="card-body">
 <div class="cat">Perakende • ÖRNEK SİTE</div>
-<h3>Perakende - Elektronik</h3>
-<p>Teknik servis vitrini, ürün karşılaştırma ve destek.</p>
-<div class="tags"><span>Servis</span><span>Karşılaştırma</span><span>Destek</span></div>
+<h3>Kuruyemiş & Şarküteri</h3>
+<p>Kuruyemiş, baharat ve yöresel ürün kataloğu.</p>
+<div class="tags"><span>kuruyemis</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/kuruyemis/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Kuruyemis%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/kuruyemis/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=kuruyemis%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
-<div class="demo-card-22" data-category="kurumsal" data-name="kurumsal - danışmanlık kurumsal">
-<div class="thumb" style="background:linear-gradient(135deg,#0f172a,#334155)">💼<span class="badge-cat">Kurumsal</span></div>
+<div class="demo-card-22" data-category="tasarım" data-name="mimarlık & dekorasyon mimarlik tasarım">
+<div class="thumb" style="background:linear-gradient(135deg,#172554,#0284c7)">📐<span class="badge-cat">Tasarım</span></div>
 <div class="card-body">
-<div class="cat">Kurumsal • ÖRNEK SİTE</div>
-<h3>Kurumsal - Danışmanlık</h3>
-<p>Kurumsal kimlik, hizmetler, referanslar ve iletişim.</p>
-<div class="tags"><span>Hizmet</span><span>Referans</span><span>İletişim</span></div>
+<div class="cat">Tasarım • ÖRNEK SİTE</div>
+<h3>Mimarlık & Dekorasyon</h3>
+<p>Proje galerisi ve keşif formu.</p>
+<div class="tags"><span>mimarlik</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/dis-ticaret/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=DisTicaret%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/mimarlik/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=mimarlik%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
-<div class="demo-card-22" data-category="otomotiv" data-name="otomotiv - galeri otomotiv">
+<div class="demo-card-22" data-category="taşımacılık" data-name="nakliyat & taşımacılık nakliyat taşımacılık">
+<div class="thumb" style="background:linear-gradient(135deg,#1e293b,#475569)">🚚<span class="badge-cat">Taşımacılık</span></div>
+<div class="card-body">
+<div class="cat">Taşımacılık • ÖRNEK SİTE</div>
+<h3>Nakliyat & Taşımacılık</h3>
+<p>Evden eve nakliyat ve asansörlü taşıma.</p>
+<div class="tags"><span>nakliyat</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
+<div class="actions">
+<a class="primary" href="/demolar/ornekler/nakliyat/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=nakliyat%20demo%20teklif" target="_blank">Teklif al</a>
+</div>
+</div>
+</div>
+<div class="demo-card-22" data-category="turizm" data-name="otel & konaklama otel turizm">
+<div class="thumb" style="background:linear-gradient(135deg,#064e3b,#10b981)">🏨<span class="badge-cat">Turizm</span></div>
+<div class="card-body">
+<div class="cat">Turizm • ÖRNEK SİTE</div>
+<h3>Otel & Konaklama</h3>
+<p>Oda tipleri, rezervasyon ve turlar.</p>
+<div class="tags"><span>otel</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
+<div class="actions">
+<a class="primary" href="/demolar/ornekler/otel/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=otel%20demo%20teklif" target="_blank">Teklif al</a>
+</div>
+</div>
+</div>
+<div class="demo-card-22" data-category="otomotiv" data-name="oto galeri & satış oto-galeri otomotiv">
 <div class="thumb" style="background:linear-gradient(135deg,#7f1d1d,#ef4444)">🏁<span class="badge-cat">Otomotiv</span></div>
 <div class="card-body">
 <div class="cat">Otomotiv • ÖRNEK SİTE</div>
-<h3>Otomotiv - Galeri</h3>
-<p>Araç ilanları, filtreleme, ekspertiz ve kredi hesaplama.</p>
-<div class="tags"><span>İlan</span><span>Ekspertiz</span><span>Kredi</span></div>
+<h3>Oto Galeri & Satış</h3>
+<p>Araç ilanları, filtreleme ve ekspertiz.</p>
+<div class="tags"><span>oto-galeri</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/oto-galeri/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=OtoGaleri%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/oto-galeri/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=oto-galeri%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
-<div class="demo-card-22" data-category="sağlık" data-name="sağlık - diyetisyen sağlık">
-<div class="thumb" style="background:linear-gradient(135deg,#14532d,#4ade80)">🥗<span class="badge-cat">Sağlık</span></div>
+<div class="demo-card-22" data-category="otomotiv" data-name="oto servis & bakım oto-servis otomotiv">
+<div class="thumb" style="background:linear-gradient(135deg,#312e81,#6366f1)">🚗<span class="badge-cat">Otomotiv</span></div>
 <div class="card-body">
-<div class="cat">Sağlık • ÖRNEK SİTE</div>
-<h3>Sağlık - Diyetisyen</h3>
-<p>Diyet programları, online danışma ve randevu sistemi.</p>
-<div class="tags"><span>Program</span><span>Danışma</span><span>Randevu</span></div>
+<div class="cat">Otomotiv • ÖRNEK SİTE</div>
+<h3>Oto Servis & Bakım</h3>
+<p>Acil yol yardım ve bakım paketleri.</p>
+<div class="tags"><span>oto-servis</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/veteriner/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Veteriner%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/oto-servis/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=oto-servis%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
-<div class="demo-card-22" data-category="yeme-içme" data-name="yeme-i̇çme - kafe yeme-içme">
-<div class="thumb" style="background:linear-gradient(135deg,#451a03,#d97706)">☕<span class="badge-cat">Yeme-içme</span></div>
+<div class="demo-card-22" data-category="yeme-içme" data-name="restoran & qr menü restoran yeme-içme">
+<div class="thumb" style="background:linear-gradient(135deg,#3a1a0e,#ea580c)">🍽<span class="badge-cat">Yeme-içme</span></div>
 <div class="card-body">
 <div class="cat">Yeme-içme • ÖRNEK SİTE</div>
-<h3>Yeme-İçme - Kafe</h3>
-<p>Kafe menüsü, şube bilgileri, etkinlikler ve rezervasyon.</p>
-<div class="tags"><span>Menü</span><span>Şube</span><span>Etkinlik</span></div>
+<h3>Restoran & QR Menü</h3>
+<p>Lezzet odaklı menü, şef seçkileri ve rezervasyon.</p>
+<div class="tags"><span>restoran</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
 <div class="actions">
-<a class="primary" href="/demolar/ornekler/kebap/" target="_blank">Canlı demoyu incele ↗</a>
-<a class="secondary" href="https://wa.me/905433880019?text=Kebap%20teklif" target="_blank">Teklif al</a>
+<a class="primary" href="/demolar/ornekler/restoran/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=restoran%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
 </div>
 </div>
-
+<div class="demo-card-22" data-category="kurumsal" data-name="sanayi & i̇malat sanayi kurumsal">
+<div class="thumb" style="background:linear-gradient(135deg,#1e293b,#f97316)">🏭<span class="badge-cat">Kurumsal</span></div>
+<div class="card-body">
+<div class="cat">Kurumsal • ÖRNEK SİTE</div>
+<h3>Sanayi & İmalat</h3>
+<p>Fabrika ve OSB için kurumsal katalog.</p>
+<div class="tags"><span>sanayi</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
+<div class="actions">
+<a class="primary" href="/demolar/ornekler/sanayi/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=sanayi%20demo%20teklif" target="_blank">Teklif al</a>
 </div>
-
-<div style="text-align:center;padding:40px;background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:20px;margin-bottom:80px">
-<h3 style="font-size:20px;margin-bottom:12px">Beğendiğiniz yok mu? Sıfırdan tasarlayalım</h3>
-<p style="color:var(--muted);font-size:14px;margin-bottom:20px">Sektörünüzü söyleyin, size özel blueprint'i 24 saatte çıkaralım.</p>
-<a class="btn btn-p" href="https://wa.me/905433880019?text=Ozel%20tasarim">Özel Tasarım İste →</a>
+</div>
+</div>
+<div class="demo-card-22" data-category="spor & yaşam" data-name="spor salonu & fitness spor-salonu spor & yaşam">
+<div class="thumb" style="background:linear-gradient(135deg,#14532d,#22c55e)">💪<span class="badge-cat">Spor & yaşam</span></div>
+<div class="card-body">
+<div class="cat">Spor & yaşam • ÖRNEK SİTE</div>
+<h3>Spor Salonu & Fitness</h3>
+<p>Üyelik paketleri ve antrenör kadrosu.</p>
+<div class="tags"><span>spor-salonu</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
+<div class="actions">
+<a class="primary" href="/demolar/ornekler/spor-salonu/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=spor-salonu%20demo%20teklif" target="_blank">Teklif al</a>
+</div>
+</div>
+</div>
+<div class="demo-card-22" data-category="ev & işyeri" data-name="temizlik & hijyen temizlik ev & işyeri">
+<div class="thumb" style="background:linear-gradient(135deg,#0c4a6e,#0ea5e9)">🧹<span class="badge-cat">Ev & işyeri</span></div>
+<div class="card-body">
+<div class="cat">Ev & işyeri • ÖRNEK SİTE</div>
+<h3>Temizlik & Hijyen</h3>
+<p>Ev ve işyeri temizlik paketleri ve rezervasyon.</p>
+<div class="tags"><span>temizlik</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
+<div class="actions">
+<a class="primary" href="/demolar/ornekler/temizlik/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=temizlik%20demo%20teklif" target="_blank">Teklif al</a>
+</div>
+</div>
+</div>
+<div class="demo-card-22" data-category="sağlık" data-name="veteriner & pet veteriner sağlık">
+<div class="thumb" style="background:linear-gradient(135deg,#14532d,#4ade80)">🐾<span class="badge-cat">Sağlık</span></div>
+<div class="card-body">
+<div class="cat">Sağlık • ÖRNEK SİTE</div>
+<h3>Veteriner & Pet</h3>
+<p>Veteriner kliniği için randevu ve hizmetler.</p>
+<div class="tags"><span>veteriner</span><span>Mobil uyumlu</span><span>Örnek tasarım</span></div>
+<div class="actions">
+<a class="primary" href="/demolar/ornekler/veteriner/">Canlı demoyu incele ↗</a>
+<a class="secondary" href="https://wa.me/905433880019?text=veteriner%20demo%20teklif" target="_blank">Teklif al</a>
+</div>
+</div>
+</div>
 </div>
 </div>
 <script>
@@ -363,7 +317,8 @@ let currentFilter='all';
 function setFilter(cat){
   currentFilter=cat;
   document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
-  document.querySelector(`[data-filter="${cat}"]`).classList.add('active');
+  document.querySelector(`[data-filter="${cat}"]`)?.classList.add('active');
+  if(cat==='all') document.querySelector('[data-filter="all"]').classList.add('active');
   filterDemos();
 }
 function filterDemos(){
@@ -373,7 +328,7 @@ function filterDemos(){
     const name=card.dataset.name;
     const cat=card.dataset.category;
     const matchSearch = !q || name.includes(q);
-    const matchCat = currentFilter==='all' || cat===currentFilter;
+    const matchCat = currentFilter==='all' || cat.includes(currentFilter) || name.includes(currentFilter);
     const show = matchSearch && matchCat;
     card.style.display = show ? 'flex' : 'none';
     if(show) visible++;
