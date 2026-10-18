@@ -121,7 +121,7 @@ body.menu-open{overflow:hidden}
 .demo-card-22:hover{transform:translateY(-6px);border-color:rgba(0,229,255,0.32);box-shadow:0 18px 50px rgba(0,0,0,0.4), 0 0 28px rgba(0,229,255,0.14)}
 .demo-card-22 .thumb{height:160px;display:grid;place-items:center;font-size:44px;position:relative;border-bottom:1px solid rgba(255,255,255,0.06)}
 .demo-card-22 .thumb .badge-cat{position:absolute;top:12px;left:12px;font-size:10px;font-weight:800;letter-spacing:0.8px;padding:5px 10px;border-radius:999px;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);color:#fff;border:1px solid rgba(255,255,255,0.1)}
-.demo-card-22 .body{padding:20px;display:flex;flex-direction:column;flex-grow:1}
+.demo-card-22 .card-body{padding:20px;display:flex;flex-direction:column;flex-grow:1}
 .demo-card-22 h3{font-size:17px;font-weight:800;margin-bottom:6px;color:#fff}
 .demo-card-22 .cat{font-size:11px;color:var(--cyan);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
 .demo-card-22 p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px;flex-grow:1}
@@ -132,6 +132,9 @@ body.menu-open{overflow:hidden}
 .demo-card-22 .actions .primary{background:linear-gradient(135deg,var(--cyan),#8CF2FF);color:#00141C}
 .demo-card-22 .actions .secondary{background:rgba(255,255,255,0.04);border:1px solid var(--border);color:#fff}
 .demo-card-22 .actions a:hover{transform:translateY(-1px)}
+/* FIX: Filter chip button reset - beyaz kutu olmasın */
+button.filter-chip{appearance:none;-webkit-appearance:none;font-family:inherit}
+.demo-card-22 .card-body{padding:20px;display:flex;flex-direction:column;flex-grow:1}
 /* Scroll lock - iOS fix */
 html.scroll-lock, body.scroll-lock{overflow:hidden !important;position:fixed;left:0;right:0;width:100%}
 </style>
