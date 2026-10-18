@@ -1,0 +1,43 @@
+<header>
+<div class="wrap nav">
+<a class="brand" href="/"><div class="logo">VK</div><div><b>VİTRİNKODU</b></div></a>
+<nav class="links" id="desktopNav">
+<a href="/">Anasayfa</a>
+<a href="/demolar/">Demolar</a>
+<a href="/sss/">SSS</a>
+<a href="/blog/">Blog</a>
+<a href="/iletisim/">İletişim</a>
+</nav>
+<a class="btn btn-p desktop-only" href="https://wa.me/905433880019" target="_blank" rel="noopener noreferrer">Teklif Al ↗</a>
+<button class="hamburger" id="hamburgerBtn" aria-label="Menüyü Aç" onclick="toggleMobileMenu()">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="/" onclick="closeMobileMenu()">Anasayfa</a>
+<a href="/demolar/" onclick="closeMobileMenu()">Demolar</a>
+<a href="/sss/" onclick="closeMobileMenu()">SSS</a>
+<a href="/blog/" onclick="closeMobileMenu()">Blog</a>
+<a href="/hakkimizda/" onclick="closeMobileMenu()">Hakkımızda</a>
+<a href="/hizmetlerimiz/" onclick="closeMobileMenu()">Hizmetlerimiz</a>
+<a href="/iletisim/" onclick="closeMobileMenu()">İletişim</a>
+<a class="btn btn-p" style="margin-top:12px;justify-content:center" href="https://wa.me/905433880019" target="_blank" rel="noopener noreferrer">Teklif Al ↗</a>
+</div>
+<div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
+</header>
+<script>
+function toggleMobileMenu(){
+  const menu=document.getElementById('mobileMenu');
+  const overlay=document.getElementById('mobileOverlay');
+  const btn=document.getElementById('hamburgerBtn');
+  const isOpen=menu.classList.contains('open');
+  if(isOpen){closeMobileMenu()}else{menu.classList.add('open');overlay.classList.add('open');btn.classList.add('open');document.body.style.overflow='hidden'}
+}
+function closeMobileMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('mobileOverlay').classList.remove('open');
+  document.getElementById('hamburgerBtn').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMobileMenu()});
+</script>
