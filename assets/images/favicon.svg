@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Koyu Yuvarlatılmış Arka Plan -->
+  <rect width="512" height="512" rx="112" fill="#070B14" />
+  
+  <!-- Turkuaz VK Harfleri -->
+  <g fill="none" stroke="#00E5FF" stroke-linecap="round" stroke-linejoin="round">
+    <!-- V Harfi -->
+    <path d="M110 160 L195 380 L235 270 L275 380 L360 160" stroke-width="36" />
+    <!-- K Harfi -->
+    <path d="M300 160 L300 350 M300 255 L375 160 M300 255 L380 350" stroke-width="34" />
+  </g>
+</svg>
