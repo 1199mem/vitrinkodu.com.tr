@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>{% include head.html %}</head>
+<body>
+{% include header.html %}
+<main>{{ content }}</main>
+{% include footer.html %}
+<div id="m-demo" class="modal-backdrop"><div class="modal-card"><h3 id="m-demo-title">Demo</h3><p id="m-demo-text" style="color:var(--muted);font-size:13.5px;margin-top:8px"></p><div style="margin-top:16px"><a id="m-demo-wa" class="btn btn-p" target="_blank">WhatsApp'tan Bilgi Al</a></div><button class="modal-close-btn" onclick="closeModal('m-demo')">Kapat</button></div></div>
+<script>
+function openModal(id){document.getElementById(id).classList.add('active')}function closeModal(id){document.getElementById(id).classList.remove('active')}
+function openDemo(n){document.getElementById('m-demo-title').textContent=n+' Demosu';document.getElementById('m-demo-text').textContent=n+' için özel tasarım - Başlangıç 8.500 TL\'den başlayan paketlerle! Hemen teklif al.';document.getElementById('m-demo-wa').href='https://wa.me/905433880019?text='+encodeURIComponent(n+' demo için teklif istiyorum');openModal('m-demo')}
+window.onclick=function(e){if(e.target.classList.contains('modal-backdrop'))e.target.classList.remove('active')}
+</script>
+</body>
+</html>
